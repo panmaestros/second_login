@@ -1,0 +1,41 @@
+{
+  "name": "my_login_app",
+  "version": "1.0.0",
+  "description": "Basic login system using nodejs, express, mysql, passport, ejs template ",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "test": "mocha || true",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "login",
+    "ejs",
+    "passport",
+    "mysql",
+    "register",
+    "express-session"
+  ],
+  "author": "Mark Springer",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "moment": "^2.20.1",
+    "morgan": "^1.9.0",
+    "mysql2": "^1.5.2",
+    "node-cache": "^4.1.1",
+    "sequelize": "^4.33.4",
+    "uuid": "^3.2.1",
+    "validator": "^9.4.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1"
+  }
+}

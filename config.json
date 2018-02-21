@@ -1,0 +1,30 @@
+{
+  "dev": {
+    "dialect": "mysql",
+    "user": "root",
+    "database": "second_login",
+    "password": "springer",
+    "host": "localhost",
+    "port": "3306",
+    "pool": {
+      "max": 100,
+      "min": 0,
+      "idle": 10000
+    }
+  },
+
+  "prod": {
+    "dialect": "mysql",
+    "user": "root",
+    "database": "second_login",
+    "password": "springer",
+    "host": "localhost",
+    "port": "3306",
+
+    "pool": {
+      "max": 100,
+      "min": 0,
+      "idle": 10000
+    }
+  }
+}
