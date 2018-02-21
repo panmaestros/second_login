@@ -82,7 +82,7 @@ The extra protection features that were implemented were as follows:
 
     2. A session length for the user depends on the user's country selected.
 
-One example of future requirement, you can be to use a different salt encryption based on the user's country. To implement this new authentication rule please read the manual document `docs/userauthenticationrules.rtf`
+One example of future requirement is to use a different salt encryption based on the user's country. To implement this new authentication rule please read the manual document `docs/UserAuthenticationRules.rtf`
 
 Note: Entering random usernames and passwords 13 times in the span of 10 minutes would result in your ipaddress being block from logging in for 20 minutes. This feature was instructed to be independent of the user so it couldn't be part of the authentication rules that were based on user's country.
 
