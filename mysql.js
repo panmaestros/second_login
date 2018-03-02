@@ -14,7 +14,7 @@ const sequelize = new Sequelize(config.database, config.user, config.password, {
   port: config.port,
   // To create a pool of connections
   pool: config.pool,
-  logging: console.log,
+  logging: false,//console.log,
   operatorsAliases: false
 
 });
@@ -246,7 +246,7 @@ sequelize.sync().then(() => {
   return Rule.bulkCreate(rules,{ validate: true }) // populate rules table with dummy data
 
 })
-.catch(error => console.log('This error occured', error));
+.catch(error => console.log('Error creating table occured or table aready exists'));//,error
 
 
 // export functions to be used externally
