@@ -17,7 +17,7 @@ module.exports = (app)=>{
           successRedirect: '/profile', // redirect to the secure profile section
           failureRedirect: '/register', // redirect back to the signup page if there is an error
           failureFlash: true, // allow flash messages
-          failureKey:'registerMessage',
+          failureKey:'registerMessage',//id of failure of messages
       }))
 
 
@@ -33,7 +33,7 @@ module.exports = (app)=>{
           successRedirect: '/profile', // redirect to the secure profile section
           failureRedirect: '/login', // redirect back to the signup page if there is an error
           failureFlash: true, // allow flash messages
-          failureKey:'loginMessage',
+          failureKey:'loginMessage', //id for failure messages
       }));
 
     // =====================================

@@ -16,13 +16,16 @@ describe('App', function(){ //mocha
     //these are dummy inputs for user, remember to change username each time u run this test as the username must be unique to succeed
     let res={};
     let next={};
-    //authentication.register is a promise based function  that from the authenticationlibrary
-    authentication.register(req, res, next,{
+    const returnRoutes = {
         successRedirect: '/profile', // redirect to the secure profile section
         failureRedirect: '/register', // redirect back to the signup page if there is an error
         failureFlash: false, // allow flash messages
-        failureKey:'registerMessage',
-    }, true).then((result) => {
+        failureKey:'regsiterMessage',// id of failure message
+    };
+    const testmode = true; // if test mode is true the return result is either null or error message
+
+    //authentication.register is a promise based function  that from the authenticationlibrary
+    authentication.register(req, res, next, returnRoutes,testmode).then((result) => {
       assert.isNull(result, 'there was an error registering');//evaluate the function from the result, if null then the function was successful
       done()
     }).catch((err) =>{
@@ -40,13 +43,15 @@ describe('App', function(){ //mocha
     //dummy inputs these inputs will always succeed once the user's credential are correct
     let res={};
     let next={};
-      //authentication.login is a promise based function that from the authenticationlibrary
-    authentication.login(req, res, next,{
+    const returnRoutes = {
         successRedirect: '/profile', // redirect to the secure profile section
-        failureRedirect: '/login', // redirect back to the signup page if there is an error
+        failureRedirect: '/login', // redirect back to the login page if there is an error
         failureFlash: false, // allow flash messages
-        failureKey:'loginMessage',
-    },true).then((result) => {
+        failureKey:'loginMessage',// id of failure message
+    };
+    const testmode = true; // if test mode is true the return result is either null or error message
+      //authentication.login is a promise based function that from the authenticationlibrary
+    authentication.login(req, res, next,returnRoutes,testmode).then((result) => {
       assert.isNull(result, 'there was an error loggin in'); //evaluate the function from the result, if null then the function was successful
       done()
     }).catch((err) => {
